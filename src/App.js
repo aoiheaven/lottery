@@ -10,7 +10,7 @@ class App extends Component {
     const canvas = this.canvas.current
     const context = canvas.getContext('2d')
     const turntable = new Turntable({canvas: canvas, context: context})
-    turntable.render()
+    turntable.startRotate()
   }
 
   render() {
@@ -19,8 +19,8 @@ class App extends Component {
       ref={this.canvas}
       style={
         {
-          width: '300px',
-          height: '150px',
+          width: '700px',
+          height: '350px',
           position: 'absolute',
           top: 0,
           left: 0,
